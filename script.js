@@ -1,4 +1,5 @@
-document.querySelectorAll('.btn').forEach(button => {
+
+        document.querySelectorAll('.btn').forEach(button => {
             button.addEventListener('click', function() {
                 const topic = this.previousElementSibling.textContent;
                 const chapter = this.closest('.chapter').querySelector('h2').textContent;
@@ -12,6 +13,6 @@ document.querySelectorAll('.btn').forEach(button => {
                 this.textContent = 'Completed';
                 this.disabled = true;
 
-                alert(`Starting study session for:\n${chapter}\n${topic}`);
+                alert(`Starting Question Practice session for:\n${chapter}\n${topic}`);
             });
         });
