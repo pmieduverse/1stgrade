@@ -5,7 +5,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PMI EDUVERSE - Biology Syllabus</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-color: #fbc531;
+            --secondary-color: #192a56;
+            --text-color: #f5f6fa;
+            --bg-gradient: linear-gradient(135deg, #001f3f, #1e3799, #0097e6);
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 15px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.07);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: var(--primary-color);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+            letter-spacing: 1px;
+        }
+        h1 { font-size: 2em; margin-bottom: 20px; }
+        h2 { font-size: 1.5em; margin-top: 5px; }
+        .chapter {
+            margin-bottom: 30px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .chapter:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .topic {
+            margin: 15px 0;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+        }
+        .topic:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(5px);
+        }
+        .btn {
+            background: var(--primary-color);
+            color: var(--secondary-color);
+            border: none;
+            padding: 8px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            margin-top: 10px;
+            align-self: flex-end;
+        }
+        .btn:hover {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            width: 150px;
+            height: auto;
+            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.3));
+        }
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(3deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        .floating {
+            animation: float 4s ease-in-out infinite;
+        }
+        .progress-bar {
+            height: 6px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+        .progress {
+            width: 0;
+            height: 100%;
+            background: var(--primary-color);
+            transition: width 0.5s ease;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 15px;
+            }
+            h1 { font-size: 1.8em; }
+            h2 { font-size: 1.3em; }
+            .chapter {
+                padding: 10px;
+            }
+            .topic {
+                padding: 10px;
+            }
+            .btn {
+                padding: 6px 12px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -17,7 +148,7 @@
         <div class="chapter">
             <h2>Chapter 1: Introduction to Biology & Taxonomy</h2>
             <div class="topic">
-                <span>Definition of Life, Biodiversity, Need for Classification. (11th-12th)</span>
+                <span>Definition of Life, Biodiversity, Need for Classification (11th-12th)</span>
                 <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
@@ -370,6 +501,25 @@
             
         </div>
     </div>
-<script type="module" src="script.js"></script>
+
+    <script>
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const topic = this.previousElementSibling.textContent;
+                const chapter = this.closest('.chapter').querySelector('h2').textContent;
+                const progressBar = this.closest('.chapter').querySelector('.progress');
+                const topicsInChapter = this.closest('.chapter').querySelectorAll('.topic').length;
+                const completedTopics = this.closest('.chapter').querySelectorAll('.btn.completed').length + 1;
+                const progressPercentage = (completedTopics / topicsInChapter) * 100;
+                
+                progressBar.style.width = `${progressPercentage}%`;
+                this.classList.add('completed');
+                this.textContent = 'Completed';
+                this.disabled = true;
+
+                alert(`Starting Question Practice session for:\n${chapter}\n${topic}`);
+            });
+        });
+    </script>
 </body>
 </html>
