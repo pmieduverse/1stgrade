@@ -5,7 +5,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PMI EDUVERSE - Biology Syllabus</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-color: #fbc531;
+            --secondary-color: #192a56;
+            --text-color: #f5f6fa;
+            --bg-gradient: linear-gradient(135deg, #001f3f, #1e3799, #0097e6);
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 15px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.07);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: var(--primary-color);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+            letter-spacing: 1px;
+        }
+        h1 { font-size: 2em; margin-bottom: 20px; }
+        h2 { font-size: 1.5em; margin-top: 5px; }
+        .chapter {
+            margin-bottom: 30px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .chapter:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .topic {
+            margin: 15px 0;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+        }
+        .topic:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(5px);
+        }
+        .btn {
+            background: var(--primary-color);
+            color: var(--secondary-color);
+            border: none;
+            padding: 8px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            margin-top: 10px;
+            align-self: flex-end;
+        }
+        .btn:hover {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            width: 150px;
+            height: auto;
+            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.3));
+        }
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(3deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        .floating {
+            animation: float 4s ease-in-out infinite;
+        }
+        .progress-bar {
+            height: 6px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+        .progress {
+            width: 0;
+            height: 100%;
+            background: var(--primary-color);
+            transition: width 0.5s ease;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 15px;
+            }
+            h1 { font-size: 1.8em; }
+            h2 { font-size: 1.3em; }
+            .chapter {
+                padding: 10px;
+            }
+            .topic {
+                padding: 10px;
+            }
+            .btn {
+                padding: 6px 12px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -18,43 +149,43 @@
             <h2>Chapter 1: Introduction to Biology & Taxonomy</h2>
             <div class="topic">
                 <span>Definition of Life, Biodiversity, Need for Classification (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Concept of Species & Taxonomical Hierarchy (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Binomial Nomenclature (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Tools for Taxonomy – Museums, Zoos, Herbaria, Botanical Gardens (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Five Kingdom Classification of Living Organisms (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Salient Features & Classification of Plants (Major Groups up to Class) (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Life Cycle of Algae, Fungi, Bryophytes, Pteridophytes, Gymnosperms, Angiosperms (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Classification of Non-Chordates & Chordates (Up to Order Level) (UG)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Symmetry, Coelom, Metamerism, Arthropodization (UG)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Floral Variations in Ranunculaceae, Apiaceae, Asteraceae, Poaceae (UG)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="progress-bar"><div class="progress"></div></div>
         </div>
@@ -63,35 +194,35 @@
             <h2>Chapter 2: Cell Structure & Biomolecules</h2>
             <div class="topic">
                 <span>Cell Theory & Concept (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Structure of Prokaryotic & Eukaryotic Cells (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Plant & Animal Cells, Structure & Functions of Cell Organelles (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Cell Surface – Structure, Properties & Functions (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Chromosomes – Structure, Types, Aberrations (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Biomolecules: Proteins, Carbohydrates, Lipids, Nucleic Acids (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Enzymes – Types, Properties, Mechanism of Action (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Cell Cycle & Cell Division (Mitosis, Meiosis & Significance) (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="progress-bar"><div class="progress"></div></div>
         </div>
@@ -100,19 +231,19 @@
             <h2>Chapter 3: Structural Organization in Animals & Plants</h2>
             <div class="topic">
                 <span>Animal Tissues: Types, Origin, Location, Structure & Function (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Plant Tissues: Anatomy of Root, Stem, Leaves (Monocots & Dicots) (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Morphology, Anatomy & Function of Inflorescence, Flowers, Fruits (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Structure & Life Cycle of Amoeba, Obelia, Taenia, Ascaris, Pheretima, Periplaneta, Rana, Rabbit (UG)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="progress-bar"><div class="progress"></div></div>
         </div>
@@ -121,59 +252,59 @@
             <h2>Chapter 4: Animal & Plant Physiology</h2>
             <div class="topic">
                 <span>Animal Physiology: Digestion & Absorption (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Breathing & Respiration (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Body Fluids & Circulation (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Excretory Products & Their Elimination (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Locomotion & Movement (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Neural Control & Coordination (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Chemical Coordination & Regulation (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Reproduction (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Endocrine Control of Ovulation, Pregnancy, Parturition, Lactation (UG)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Plant Physiology: Water Relations & Transpiration (UG)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Photosynthesis & Respiration (UG)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Growth & Mineral Nutrition (UG)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Plant Movements (UG)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Nitrogen & Lipid Metabolism (UG)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="progress-bar"><div class="progress"></div></div>
         </div>
@@ -182,31 +313,31 @@
             <h2>Chapter 5: Reproduction & Embryology</h2>
             <div class="topic">
                 <span>Reproduction in Plants: Vegetative, Asexual & Sexual Reproduction (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Structure of Flowers, Pollination, Fertilization, Embryo Development (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Reproduction & Embryology in Animals: Gametogenesis (Spermatogenesis & Oogenesis) (UG)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Fertilization, Cleavage, Blastula, Gastrula (UG)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Morphogenetic Movements, Fate Maps, Embryonic Induction (UG)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Metamorphosis of Frog, Regeneration in Amphibians (UG)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Extra-Embryonic Membranes in Chick, Placenta in Mammals (UG)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="progress-bar"><div class="progress"></div></div>
         </div>
@@ -215,19 +346,19 @@
             <h2>Chapter 6: Genetics & Evolution</h2>
             <div class="topic">
                 <span>Mendelian Inheritance & Chromosome Theory of Inheritance (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Sex Determination in Human Beings (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Linkage & Crossing Over (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Origin of Life – Theories & Evidence (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="progress-bar"><div class="progress"></div></div>
         </div>
@@ -236,39 +367,39 @@
             <h2>Chapter 7: Biology & Human Welfare</h2>
             <div class="topic">
                 <span>Human Health & Diseases: Basic Concepts of Immunology (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Vaccines, Pathogens, Parasites, Cancer, AIDS (11th-12th)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Economic Importance of Organisms: Protozoa, Helminths, Molluscs, Insects (UG)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Plant Utilization: Cereals – Wheat, Rice (UG)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Fiber Plants – Cotton, Jute (UG)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Vegetable Oils – Groundnut, Mustard (UG)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Spices – Coriander, Fenugreek, Cumin (UG)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Medicinal Plants – Commiphora, Withania (UG)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="topic">
                 <span>Beverages – Tea, Coffee (UG)</span>
-                <button class="btn">Study Now</button>
+                <button class="btn"><a href="comingsoon.html">Quiz</a></button>
             </div>
             <div class="progress-bar"><div class="progress"></div></div>
         </div>
@@ -367,8 +498,28 @@
                 <button class="btn">Study Now</button>
             </div>
             <div class="progress-bar"><div class="progress"></div></div>
+            
         </div>
     </div>
-    <script type="module" src="script.js"></script>
+
+    <script>
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const topic = this.previousElementSibling.textContent;
+                const chapter = this.closest('.chapter').querySelector('h2').textContent;
+                const progressBar = this.closest('.chapter').querySelector('.progress');
+                const topicsInChapter = this.closest('.chapter').querySelectorAll('.topic').length;
+                const completedTopics = this.closest('.chapter').querySelectorAll('.btn.completed').length + 1;
+                const progressPercentage = (completedTopics / topicsInChapter) * 100;
+                
+                progressBar.style.width = `${progressPercentage}%`;
+                this.classList.add('completed');
+                this.textContent = 'Completed';
+                this.disabled = true;
+
+                alert(`Starting Question Practice session for:\n${chapter}\n${topic}`);
+            });
+        });
+    </script>
 </body>
 </html>
